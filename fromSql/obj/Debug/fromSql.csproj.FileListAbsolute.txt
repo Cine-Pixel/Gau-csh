@@ -1,0 +1,9 @@
+C:\Users\ikaum\source\repos\ADOnet\fromSql\bin\Debug\fromSql.exe
+C:\Users\ikaum\source\repos\ADOnet\fromSql\bin\Debug\fromSql.pdb
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.csproj.AssemblyReference.cache
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.Form1.resources
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.Properties.Resources.resources
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.csproj.GenerateResource.cache
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.csproj.CoreCompileInputs.cache
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.exe
+C:\Users\ikaum\source\repos\ADOnet\fromSql\obj\Debug\fromSql.pdb

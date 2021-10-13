@@ -1,0 +1,6 @@
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\bin\Debug\sqlTest.exe
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\bin\Debug\sqlTest.pdb
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\obj\Debug\sqlTest.csproj.AssemblyReference.cache
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\obj\Debug\sqlTest.csproj.CoreCompileInputs.cache
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\obj\Debug\sqlTest.exe
+C:\Users\ikaum\source\repos\ADOnet\sqlTest\obj\Debug\sqlTest.pdb
