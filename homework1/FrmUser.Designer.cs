@@ -189,12 +189,14 @@ namespace homework1 {
             // 
             // dtpBirthDate
             // 
+            this.dtpBirthDate.Checked = false;
+            this.dtpBirthDate.CustomFormat = "";
             this.dtpBirthDate.Location = new System.Drawing.Point(12, 184);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(219, 20);
             this.dtpBirthDate.TabIndex = 11;
             // 
-            // frmUser
+            // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +219,7 @@ namespace homework1 {
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.label1);
-            this.Name = "frmUser";
+            this.Name = "FrmUser";
             this.Text = "frmUser";
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.ResumeLayout(false);

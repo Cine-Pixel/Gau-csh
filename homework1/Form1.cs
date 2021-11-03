@@ -75,7 +75,7 @@ namespace homework1 {
                                 com.ExecuteNonQuery();
                             }
                             catch (Exception ex) {
-                                throw new Exception($"შეცდომა მოხდა ბაზის მხარეს: {ex.Message}");
+                                throw new Exception($"DB error: {ex.Message}");
                             }
                         }
                     }
@@ -104,9 +104,9 @@ namespace homework1 {
                     EMail = (string)cells[7].Value,
                     RoleID = (int)cells[8].Value
                 };
-                user.BirthDate = (DateTime?)cells[4].Value;
+                user.BirthDate = !(cells[4].Value is DBNull) ? (DateTime?)cells[4].Value : null;
                 FrmUser frm = new FrmUser("Edit User", "Edit User", user);
-
+                frm.Show();
             } else {
                 MessageBox.Show("Please select only one row");
             }
