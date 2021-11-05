@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Midterm1 {
+    public class Book : Product {
+        #region Private Props
+        private string name;
+        private List<Author> authors;
+        private DateTime publishDate;
+        private string publisher;
+        private int pageNumber;
+        #endregion
+
+        #region Public Props
+        public string PName { get => name; }
+        public string Authors { get {
+                string allAuthorInfo = "";
+                foreach(Author author in authors) {
+                    allAuthorInfo += author.Info();
+                }
+                return allAuthorInfo;
+            } 
+        }
+        public string PublishDate { get => publishDate.ToString(); }
+        public string Publisher { get => publisher; }
+        public int PageNumber { get => pageNumber; }
+        #endregion
+
+        public Book(string name, List<Author> authors, DateTime publishdate, string publisher, int pagenum) {
+            this.name = name;
+            this.authors = authors;
+            this.publishDate = publishdate;
+            this.publisher = publisher;
+            this.pageNumber = pagenum;
+        }
+
+        public override string Info() {
+            string allAuthorInfo = "";
+            foreach(Author author in authors) {
+                allAuthorInfo += author.Info();
+            }
+            return $"Book name: {name}\nAuthors: {allAuthorInfo}\n"+
+                $"Publish date: {publishDate}\nPublisher: {publisher}\nPages: {pageNumber}";
+        }
+    }
+}
