@@ -108,5 +108,10 @@ namespace Midterm1 {
             }
         }
 
+        private void btnTopAuthors_Click(object sender, EventArgs e) {
+            DataTable topAuthors = DB.Procedure("TopAuthors");
+            AuthorsForm authorsForm = new AuthorsForm(topAuthors);
+            authorsForm.Show();
+        }
     }
 }

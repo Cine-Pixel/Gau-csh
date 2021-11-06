@@ -55,6 +55,12 @@
       <DependentUpon>ArticleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Author.cs" />
+    <Compile Include="AuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorsForm.Designer.cs">
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="BookForm.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,9 @@
     <Compile Include="Product.cs" />
     <EmbeddedResource Include="ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorsForm.resx">
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>

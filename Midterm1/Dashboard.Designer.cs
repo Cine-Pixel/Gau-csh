@@ -47,6 +47,9 @@ namespace Midterm1 {
             this.label4 = new System.Windows.Forms.Label();
             this.numTopM = new System.Windows.Forms.NumericUpDown();
             this.btnTopM = new System.Windows.Forms.Button();
+            this.btnTopAuthors = new System.Windows.Forms.Button();
+            this.btnArchive = new System.Windows.Forms.Button();
+            this.btnViewArchive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTopM)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +129,7 @@ namespace Midterm1 {
             // 
             // btnLoadGrid
             // 
-            this.btnLoadGrid.Location = new System.Drawing.Point(722, 133);
+            this.btnLoadGrid.Location = new System.Drawing.Point(3, 133);
             this.btnLoadGrid.Name = "btnLoadGrid";
             this.btnLoadGrid.Size = new System.Drawing.Size(75, 23);
             this.btnLoadGrid.TabIndex = 2;
@@ -232,10 +235,41 @@ namespace Midterm1 {
             this.btnTopM.UseVisualStyleBackColor = true;
             this.btnTopM.Click += new System.EventHandler(this.btnTopM_Click);
             // 
+            // btnTopAuthors
+            // 
+            this.btnTopAuthors.Location = new System.Drawing.Point(722, 124);
+            this.btnTopAuthors.Name = "btnTopAuthors";
+            this.btnTopAuthors.Size = new System.Drawing.Size(75, 23);
+            this.btnTopAuthors.TabIndex = 10;
+            this.btnTopAuthors.Text = "Top Authors";
+            this.btnTopAuthors.UseVisualStyleBackColor = true;
+            this.btnTopAuthors.Click += new System.EventHandler(this.btnTopAuthors_Click);
+            // 
+            // btnArchive
+            // 
+            this.btnArchive.Location = new System.Drawing.Point(84, 133);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Size = new System.Drawing.Size(75, 23);
+            this.btnArchive.TabIndex = 11;
+            this.btnArchive.Text = "Archive";
+            this.btnArchive.UseVisualStyleBackColor = true;
+            // 
+            // btnViewArchive
+            // 
+            this.btnViewArchive.Location = new System.Drawing.Point(165, 133);
+            this.btnViewArchive.Name = "btnViewArchive";
+            this.btnViewArchive.Size = new System.Drawing.Size(83, 23);
+            this.btnViewArchive.TabIndex = 11;
+            this.btnViewArchive.Text = "View Archive";
+            this.btnViewArchive.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnViewArchive);
+            this.Controls.Add(this.btnArchive);
+            this.Controls.Add(this.btnTopAuthors);
             this.Controls.Add(this.btnTopM);
             this.Controls.Add(this.numTopM);
             this.Controls.Add(this.label4);
@@ -285,5 +319,8 @@ namespace Midterm1 {
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numTopM;
         private System.Windows.Forms.Button btnTopM;
+        private System.Windows.Forms.Button btnTopAuthors;
+        private System.Windows.Forms.Button btnArchive;
+        private System.Windows.Forms.Button btnViewArchive;
     }
 }
