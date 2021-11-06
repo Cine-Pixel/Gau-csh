@@ -51,6 +51,7 @@ namespace Midterm1 {
             this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Annotation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTopM)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +79,8 @@ namespace Midterm1 {
             this.Number,
             this.Link,
             this.Annotation,
-            this.Id});
+            this.Id,
+            this.Type});
             this.dtgProducts.Location = new System.Drawing.Point(3, 162);
             this.dtgProducts.Name = "dtgProducts";
             this.dtgProducts.Size = new System.Drawing.Size(794, 285);
@@ -210,6 +212,7 @@ namespace Midterm1 {
             this.btnArchive.TabIndex = 11;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseVisualStyleBackColor = true;
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
             // 
             // btnViewArchive
             // 
@@ -271,6 +274,11 @@ namespace Midterm1 {
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,5 +339,6 @@ namespace Midterm1 {
         private System.Windows.Forms.DataGridViewTextBoxColumn Link;
         private System.Windows.Forms.DataGridViewTextBoxColumn Annotation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
     }
 }

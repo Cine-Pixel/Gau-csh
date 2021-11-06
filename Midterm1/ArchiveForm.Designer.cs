@@ -36,6 +36,8 @@ namespace Midterm1 {
             this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Annotation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUnarchive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,8 @@ namespace Midterm1 {
             this.Number,
             this.Link,
             this.Annotation,
-            this.Id});
+            this.Id,
+            this.Type});
             this.dtgProducts.Location = new System.Drawing.Point(3, 127);
             this.dtgProducts.Name = "dtgProducts";
             this.dtgProducts.Size = new System.Drawing.Size(794, 319);
@@ -118,11 +121,27 @@ namespace Midterm1 {
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
             // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
+            // btnUnarchive
+            // 
+            this.btnUnarchive.Location = new System.Drawing.Point(3, 86);
+            this.btnUnarchive.Name = "btnUnarchive";
+            this.btnUnarchive.Size = new System.Drawing.Size(75, 23);
+            this.btnUnarchive.TabIndex = 3;
+            this.btnUnarchive.Text = "Unarchive";
+            this.btnUnarchive.UseVisualStyleBackColor = true;
+            this.btnUnarchive.Click += new System.EventHandler(this.btnUnarchive_Click);
+            // 
             // ArchiveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUnarchive);
             this.Controls.Add(this.dtgProducts);
             this.Controls.Add(this.label1);
             this.Name = "ArchiveForm";
@@ -147,5 +166,7 @@ namespace Midterm1 {
         private System.Windows.Forms.DataGridViewTextBoxColumn Link;
         private System.Windows.Forms.DataGridViewTextBoxColumn Annotation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.Button btnUnarchive;
     }
 }

@@ -45,6 +45,7 @@ namespace Midterm1 {
                     row.Cells[3].Value = b.Publisher;
                     row.Cells[4].Value = b.PageNumber;
                     row.Cells[9].Value = b.Id;
+                    row.Cells[10].Value = "Book";
                     dtgProducts.Rows.Add(row);
                 }
                 else if (product.GetType() == typeof(Article)) {
@@ -56,6 +57,7 @@ namespace Midterm1 {
                     row.Cells[5].Value = a.JournalName;
                     row.Cells[6].Value = a.Number;
                     row.Cells[9].Value = a.Id;
+                    row.Cells[10].Value = "Article";
                     dtgProducts.Rows.Add(row);
                 } else {
                     EResourse r = product as EResourse;
@@ -64,6 +66,7 @@ namespace Midterm1 {
                     row.Cells[7].Value = r.Link;
                     row.Cells[8].Value = r.Authors;
                     row.Cells[9].Value = r.Id;
+                    row.Cells[10].Value = "EResourse";
                     dtgProducts.Rows.Add(row);
                 }
             }
@@ -120,6 +123,38 @@ namespace Midterm1 {
         private void btnViewArchive_Click(object sender, EventArgs e) {
             ArchiveForm archive = new ArchiveForm();
             archive.Show();
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e) {
+            if(dtgProducts.SelectedRows.Count == 1) {
+                DataGridViewRow row = dtgProducts.SelectedRows[0];
+                try {
+                    if(row.Cells["Type"].Value.ToString() == "Book") {
+                        string query = "UPDATE dbo.Books SET Archived=1 WHERE Id=@Id";
+                        Dictionary<string, string> parameters = new Dictionary<string, string>() {
+                            {"Id", row.Cells["Id"].Value.ToString() }
+                        };
+                        DB.NonQuery(query, parameters);
+                    } else if(row.Cells["Type"].Value.ToString() == "Article") {
+                        string query = "UPDATE dbo.Articles SET Archived=1 WHERE Id=@Id";
+                        Dictionary<string, string> parameters = new Dictionary<string, string>() {
+                            {"Id", row.Cells["Id"].Value.ToString() }
+                        };
+                        DB.NonQuery(query, parameters);
+                    } else {
+                        string query = "UPDATE dbo.EResourses SET Archived=1 WHERE Id=@Id";
+                        Dictionary<string, string> parameters = new Dictionary<string, string>() {
+                            {"Id", row.Cells["Id"].Value.ToString() }
+                        };
+                        DB.NonQuery(query, parameters);
+                    }
+                    LoadGrid();
+                } catch(Exception ex) {
+                    MessageBox.Show("Cannot archive item: " + ex.Message);
+                }
+            } else {
+                MessageBox.Show("Please select item");
+            }
         }
     }
 }
