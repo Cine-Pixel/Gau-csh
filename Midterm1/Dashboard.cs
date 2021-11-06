@@ -84,5 +84,29 @@ namespace Midterm1 {
             EResourseForm eResourseForm = new EResourseForm();
             eResourseForm.Show();
         }
+
+        private void btnSearchDate_Click(object sender, EventArgs e) {
+            DateTime from = dtFrom.Value;
+            DateTime to = dtTo.Value;
+            List<Product> filtered = Product.Search(products, from, to);
+            if(filtered.Count > 0) {
+                FilteredFrom filteredFrom = new FilteredFrom(filtered);
+                filteredFrom.Show();
+            } else {
+                MessageBox.Show("No items in this range");
+            }
+        }
+
+        private void btnTopM_Click(object sender, EventArgs e) {
+            int m = (int)numTopM.Value;
+            List<Product> filtered = Product.TopM(products, m);
+            if(filtered.Count > 0) {
+                FilteredFrom filteredFrom = new FilteredFrom(filtered);
+                filteredFrom.Show();
+            } else {
+                MessageBox.Show("No items in this range");
+            }
+        }
+
     }
 }

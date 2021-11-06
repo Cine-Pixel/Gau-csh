@@ -39,7 +39,16 @@ namespace Midterm1 {
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.btnAddResourse = new System.Windows.Forms.Button();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSearchDate = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numTopM = new System.Windows.Forms.NumericUpDown();
+            this.btnTopM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTopM)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,7 +136,7 @@ namespace Midterm1 {
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(3, 77);
+            this.btnAddBook.Location = new System.Drawing.Point(3, 46);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(75, 23);
             this.btnAddBook.TabIndex = 3;
@@ -137,7 +146,7 @@ namespace Midterm1 {
             // 
             // btnAddArticle
             // 
-            this.btnAddArticle.Location = new System.Drawing.Point(84, 77);
+            this.btnAddArticle.Location = new System.Drawing.Point(84, 46);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 3;
@@ -147,7 +156,7 @@ namespace Midterm1 {
             // 
             // btnAddResourse
             // 
-            this.btnAddResourse.Location = new System.Drawing.Point(165, 77);
+            this.btnAddResourse.Location = new System.Drawing.Point(165, 46);
             this.btnAddResourse.Name = "btnAddResourse";
             this.btnAddResourse.Size = new System.Drawing.Size(83, 23);
             this.btnAddResourse.TabIndex = 3;
@@ -155,10 +164,86 @@ namespace Midterm1 {
             this.btnAddResourse.UseVisualStyleBackColor = true;
             this.btnAddResourse.Click += new System.EventHandler(this.btnAddResourse_Click);
             // 
+            // dtFrom
+            // 
+            this.dtFrom.Location = new System.Drawing.Point(505, 48);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(79, 20);
+            this.dtFrom.TabIndex = 4;
+            // 
+            // dtTo
+            // 
+            this.dtTo.Location = new System.Drawing.Point(622, 48);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(80, 20);
+            this.dtTo.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(469, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "From";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(596, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "To";
+            // 
+            // btnSearchDate
+            // 
+            this.btnSearchDate.Location = new System.Drawing.Point(722, 46);
+            this.btnSearchDate.Name = "btnSearchDate";
+            this.btnSearchDate.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchDate.TabIndex = 6;
+            this.btnSearchDate.Text = "Search";
+            this.btnSearchDate.UseVisualStyleBackColor = true;
+            this.btnSearchDate.Click += new System.EventHandler(this.btnSearchDate_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(462, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Top m";
+            // 
+            // numTopM
+            // 
+            this.numTopM.Location = new System.Drawing.Point(505, 88);
+            this.numTopM.Name = "numTopM";
+            this.numTopM.Size = new System.Drawing.Size(197, 20);
+            this.numTopM.TabIndex = 8;
+            // 
+            // btnTopM
+            // 
+            this.btnTopM.Location = new System.Drawing.Point(722, 85);
+            this.btnTopM.Name = "btnTopM";
+            this.btnTopM.Size = new System.Drawing.Size(75, 23);
+            this.btnTopM.TabIndex = 9;
+            this.btnTopM.Text = "Top M";
+            this.btnTopM.UseVisualStyleBackColor = true;
+            this.btnTopM.Click += new System.EventHandler(this.btnTopM_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnTopM);
+            this.Controls.Add(this.numTopM);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnSearchDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtTo);
+            this.Controls.Add(this.dtFrom);
             this.Controls.Add(this.btnAddResourse);
             this.Controls.Add(this.btnAddArticle);
             this.Controls.Add(this.btnAddBook);
@@ -169,6 +254,7 @@ namespace Midterm1 {
             this.Size = new System.Drawing.Size(800, 450);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTopM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +277,13 @@ namespace Midterm1 {
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.Button btnAddResourse;
+        private System.Windows.Forms.DateTimePicker dtFrom;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSearchDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numTopM;
+        private System.Windows.Forms.Button btnTopM;
     }
 }

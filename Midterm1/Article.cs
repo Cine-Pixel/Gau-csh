@@ -28,6 +28,7 @@ namespace Midterm1 {
         public string JournalName { get => journalName; }
         public int Number { get => number; }
         public string PublishDate { get => publishDate.ToString(); }
+        public DateTime PblishDate { get => publishDate; }
         public int PageNumber { get => pageNumber; }
         #endregion
 

@@ -25,6 +25,7 @@ namespace Midterm1 {
             } 
         }
         public string PublishDate { get => publishDate.ToString(); }
+        public DateTime PblishDate { get => publishDate; } 
         public string Publisher { get => publisher; }
         public int PageNumber { get => pageNumber; }
         #endregion

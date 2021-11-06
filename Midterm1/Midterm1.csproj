@@ -76,6 +76,12 @@
     <Compile Include="EResourseForm.Designer.cs">
       <DependentUpon>EResourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilteredFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilteredFrom.Designer.cs">
+      <DependentUpon>FilteredFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EResourseForm.resx">
       <DependentUpon>EResourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilteredFrom.resx">
+      <DependentUpon>FilteredFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
