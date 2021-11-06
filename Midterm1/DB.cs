@@ -40,7 +40,27 @@ namespace Midterm1 {
 				}
 			}
 		}
-		
+
+		public static DataTable Procedure(string name, Dictionary<string, string> parameters) {
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["company"].ConnectionString)) {
+				using (SqlCommand com = new SqlCommand(name, conn)) {
+					try {
+						com.CommandType = CommandType.StoredProcedure;
+						conn.Open();
+						foreach(KeyValuePair<string, string> pair in parameters) {
+							com.Parameters.AddWithValue($"@{pair.Key}", pair.Value);
+                        }
+						SqlDataReader sdr = com.ExecuteReader();
+						DataTable dt = new DataTable();
+						dt.Load(sdr);
+						return dt;
+					}
+					catch (Exception ex) {
+						throw new Exception($"error {ex}");
+					}
+				}
+			}
+		}
 		
 		public static DataTable Query(string query) {
 			using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["company"].ConnectionString)) {

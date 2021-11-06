@@ -26,7 +26,11 @@ namespace Midterm1 {
             dtgProducts.Refresh();
             products.Clear();
 
-            products = Helper.GetAllProducts();
+            try {
+                products = Helper.GetAllProducts();
+            } catch (Exception ex) {
+                MessageBox.Show("Error getting products: "+ex.Message);
+            }
 
             dtgProducts.AutoGenerateColumns = false;
 
@@ -64,6 +68,21 @@ namespace Midterm1 {
 
         private void btnLoadGrid_Click(object sender, EventArgs e) {
             LoadGrid();
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e) {
+            BookForm bookForm = new BookForm();
+            bookForm.Show();
+        }
+
+        private void btnAddArticle_Click(object sender, EventArgs e) {
+            ArticleForm articleForm = new ArticleForm();
+            articleForm.Show();
+        }
+
+        private void btnAddResourse_Click(object sender, EventArgs e) {
+            EResourseForm eResourseForm = new EResourseForm();
+            eResourseForm.Show();
         }
     }
 }

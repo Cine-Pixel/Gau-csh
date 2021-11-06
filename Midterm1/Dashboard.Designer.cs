@@ -26,7 +26,6 @@ namespace Midterm1 {
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.dtgProducts = new System.Windows.Forms.DataGridView();
-            this.btnLoadGrid = new System.Windows.Forms.Button();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Authors = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +35,10 @@ namespace Midterm1 {
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Annotation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLoadGrid = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnAddArticle = new System.Windows.Forms.Button();
+            this.btnAddResourse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,16 +69,6 @@ namespace Midterm1 {
             this.dtgProducts.Name = "dtgProducts";
             this.dtgProducts.Size = new System.Drawing.Size(794, 285);
             this.dtgProducts.TabIndex = 1;
-            // 
-            // btnLoadGrid
-            // 
-            this.btnLoadGrid.Location = new System.Drawing.Point(722, 133);
-            this.btnLoadGrid.Name = "btnLoadGrid";
-            this.btnLoadGrid.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadGrid.TabIndex = 2;
-            this.btnLoadGrid.Text = "Load";
-            this.btnLoadGrid.UseVisualStyleBackColor = true;
-            this.btnLoadGrid.Click += new System.EventHandler(this.btnLoadGrid_Click);
             // 
             // PName
             // 
@@ -122,10 +115,53 @@ namespace Midterm1 {
             this.Annotation.HeaderText = "Annotation";
             this.Annotation.Name = "Annotation";
             // 
+            // btnLoadGrid
+            // 
+            this.btnLoadGrid.Location = new System.Drawing.Point(722, 133);
+            this.btnLoadGrid.Name = "btnLoadGrid";
+            this.btnLoadGrid.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadGrid.TabIndex = 2;
+            this.btnLoadGrid.Text = "Load";
+            this.btnLoadGrid.UseVisualStyleBackColor = true;
+            this.btnLoadGrid.Click += new System.EventHandler(this.btnLoadGrid_Click);
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Location = new System.Drawing.Point(3, 77);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(75, 23);
+            this.btnAddBook.TabIndex = 3;
+            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
+            // btnAddArticle
+            // 
+            this.btnAddArticle.Location = new System.Drawing.Point(84, 77);
+            this.btnAddArticle.Name = "btnAddArticle";
+            this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
+            this.btnAddArticle.TabIndex = 3;
+            this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.UseVisualStyleBackColor = true;
+            this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
+            // 
+            // btnAddResourse
+            // 
+            this.btnAddResourse.Location = new System.Drawing.Point(165, 77);
+            this.btnAddResourse.Name = "btnAddResourse";
+            this.btnAddResourse.Size = new System.Drawing.Size(83, 23);
+            this.btnAddResourse.TabIndex = 3;
+            this.btnAddResourse.Text = "Add Resourse";
+            this.btnAddResourse.UseVisualStyleBackColor = true;
+            this.btnAddResourse.Click += new System.EventHandler(this.btnAddResourse_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddResourse);
+            this.Controls.Add(this.btnAddArticle);
+            this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnLoadGrid);
             this.Controls.Add(this.dtgProducts);
             this.Controls.Add(this.label1);
@@ -152,5 +188,8 @@ namespace Midterm1 {
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Link;
         private System.Windows.Forms.DataGridViewTextBoxColumn Annotation;
+        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Button btnAddArticle;
+        private System.Windows.Forms.Button btnAddResourse;
     }
 }
