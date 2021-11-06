@@ -26,15 +26,6 @@ namespace Midterm1 {
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.dtgProducts = new System.Windows.Forms.DataGridView();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Authors = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JournalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Annotation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLoadGrid = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnAddArticle = new System.Windows.Forms.Button();
@@ -50,6 +41,16 @@ namespace Midterm1 {
             this.btnTopAuthors = new System.Windows.Forms.Button();
             this.btnArchive = new System.Windows.Forms.Button();
             this.btnViewArchive = new System.Windows.Forms.Button();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Authors = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publisher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PageNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JournalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Annotation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTopM)).BeginInit();
             this.SuspendLayout();
@@ -76,56 +77,12 @@ namespace Midterm1 {
             this.JournalName,
             this.Number,
             this.Link,
-            this.Annotation});
+            this.Annotation,
+            this.Id});
             this.dtgProducts.Location = new System.Drawing.Point(3, 162);
             this.dtgProducts.Name = "dtgProducts";
             this.dtgProducts.Size = new System.Drawing.Size(794, 285);
             this.dtgProducts.TabIndex = 1;
-            // 
-            // PName
-            // 
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            // 
-            // Authors
-            // 
-            this.Authors.HeaderText = "Authors";
-            this.Authors.Name = "Authors";
-            // 
-            // PublishDate
-            // 
-            this.PublishDate.HeaderText = "PublishDate";
-            this.PublishDate.Name = "PublishDate";
-            // 
-            // Publisher
-            // 
-            this.Publisher.HeaderText = "Publisher";
-            this.Publisher.Name = "Publisher";
-            // 
-            // PageNumber
-            // 
-            this.PageNumber.HeaderText = "PageNumber";
-            this.PageNumber.Name = "PageNumber";
-            // 
-            // JournalName
-            // 
-            this.JournalName.HeaderText = "JournalName";
-            this.JournalName.Name = "JournalName";
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "Number";
-            this.Number.Name = "Number";
-            // 
-            // Link
-            // 
-            this.Link.HeaderText = "Link";
-            this.Link.Name = "Link";
-            // 
-            // Annotation
-            // 
-            this.Annotation.HeaderText = "Annotation";
-            this.Annotation.Name = "Annotation";
             // 
             // btnLoadGrid
             // 
@@ -262,6 +219,57 @@ namespace Midterm1 {
             this.btnViewArchive.TabIndex = 11;
             this.btnViewArchive.Text = "View Archive";
             this.btnViewArchive.UseVisualStyleBackColor = true;
+            this.btnViewArchive.Click += new System.EventHandler(this.btnViewArchive_Click);
+            // 
+            // PName
+            // 
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            // 
+            // Authors
+            // 
+            this.Authors.HeaderText = "Authors";
+            this.Authors.Name = "Authors";
+            // 
+            // PublishDate
+            // 
+            this.PublishDate.HeaderText = "PublishDate";
+            this.PublishDate.Name = "PublishDate";
+            // 
+            // Publisher
+            // 
+            this.Publisher.HeaderText = "Publisher";
+            this.Publisher.Name = "Publisher";
+            // 
+            // PageNumber
+            // 
+            this.PageNumber.HeaderText = "PageNumber";
+            this.PageNumber.Name = "PageNumber";
+            // 
+            // JournalName
+            // 
+            this.JournalName.HeaderText = "JournalName";
+            this.JournalName.Name = "JournalName";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "Number";
+            this.Number.Name = "Number";
+            // 
+            // Link
+            // 
+            this.Link.HeaderText = "Link";
+            this.Link.Name = "Link";
+            // 
+            // Annotation
+            // 
+            this.Annotation.HeaderText = "Annotation";
+            this.Annotation.Name = "Annotation";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
             // 
             // Dashboard
             // 
@@ -299,15 +307,6 @@ namespace Midterm1 {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgProducts;
         private System.Windows.Forms.Button btnLoadGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Authors;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Publisher;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PageNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JournalName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Link;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Annotation;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.Button btnAddResourse;
@@ -322,5 +321,15 @@ namespace Midterm1 {
         private System.Windows.Forms.Button btnTopAuthors;
         private System.Windows.Forms.Button btnArchive;
         private System.Windows.Forms.Button btnViewArchive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Authors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PublishDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Publisher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PageNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JournalName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Link;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Annotation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

@@ -28,6 +28,7 @@ namespace Midterm1 {
 
             return filteredProducts;
         }
+
         public static List<Product> TopM(List<Product> products, int m) {
             List<Product> filtered = new List<Product>();
             foreach(var product in products) {

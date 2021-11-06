@@ -30,6 +30,46 @@ namespace Midterm1 {
                     authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
                     products.Add(
                         new Book(
+                            (int)row["Id"],
+                            row["Name"].ToString(), 
+                            new List<Author>(authors), DateTime.Parse(row["PublishDate"].ToString()), 
+                            row["Publisher"].ToString(), (int)row["PageNumber"]
+                        )
+                    );
+
+                    duplicates.Clear();
+                    authors.Clear();
+                }
+                previous = rowID;
+            }
+
+            return products;
+        }
+
+        private static List<Product> GetBooksArchived() {
+            List<Product> products = new List<Product>();
+            DataTable books = DB.Procedure("BooksArchived");
+
+            List<DataRow> duplicates = new List<DataRow>();
+            List<Author> authors = new List<Author>();
+            int previous = 0;
+            foreach (DataRow row in books.Rows) {
+                int rowID = Convert.ToInt32(row["Id"]);
+
+                if (previous == rowID) duplicates.Add(row);
+                else {
+                    // Call the function that handles the duplicates
+                    if (duplicates.Count > 1) {
+                        // handle duplicates
+                        foreach(DataRow d in duplicates) {
+                            authors.Add(new Author(d["FirstName"].ToString(), d["LastName"].ToString()));
+                        }
+                    }
+
+                    authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
+                    products.Add(
+                        new Book(
+                            (int)row["Id"],
                             row["Name"].ToString(), 
                             new List<Author>(authors), DateTime.Parse(row["PublishDate"].ToString()), 
                             row["Publisher"].ToString(), (int)row["PageNumber"]
@@ -68,6 +108,48 @@ namespace Midterm1 {
                     authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
                     products.Add(
                         new Article(
+                            (int)row["Id"],
+                            row["Name"].ToString(),
+                            new List<Author>(authors), row["JournalName"].ToString(),
+                            (int)row["Number"],
+                            DateTime.Parse(row["PublishDate"].ToString()),
+                            (int)row["PageNumber"]
+                        )
+                    );
+
+                    duplicates.Clear();
+                    authors.Clear();
+                }
+                previous = rowID;
+            }
+
+            return products;
+        }
+
+        private static List<Product> GetArticlesArchived() {
+            List<Product> products = new List<Product>();
+            DataTable articles = DB.Procedure("ArticlesArchived");
+
+            List<DataRow> duplicates = new List<DataRow>();
+            List<Author> authors = new List<Author>();
+            int previous = 0;
+            foreach (DataRow row in articles.Rows) {
+                int rowID = Convert.ToInt32(row["Id"]);
+
+                if (previous == rowID) duplicates.Add(row);
+                else {
+                    // Call the function that handles the duplicates
+                    if (duplicates.Count > 1) {
+                        // handle duplicates
+                        foreach(DataRow d in duplicates) {
+                            authors.Add(new Author(d["FirstName"].ToString(), d["LastName"].ToString()));
+                        }
+                    }
+
+                    authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
+                    products.Add(
+                        new Article(
+                            (int)row["Id"],
                             row["Name"].ToString(),
                             new List<Author>(authors), row["JournalName"].ToString(),
                             (int)row["Number"],
@@ -108,6 +190,7 @@ namespace Midterm1 {
                     authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
                     products.Add(
                         new EResourse(
+                            (int)row["Id"],
                             row["Name"].ToString(), new List<Author>(authors), 
                             row["Link"].ToString(), row["Annotation"].ToString()
                         )
@@ -122,11 +205,55 @@ namespace Midterm1 {
             return products;
         }
 
+        private static List<Product> GetEResoursesArchived() {
+            List<Product> products = new List<Product>();
+            DataTable ers = DB.Procedure("EResoursesArchived");
+
+            List<DataRow> duplicates = new List<DataRow>();
+            List<Author> authors = new List<Author>();
+            int previous = 0;
+            foreach (DataRow row in ers.Rows) {
+                int rowID = Convert.ToInt32(row["Id"]);
+
+                if (previous == rowID) duplicates.Add(row);
+                else {
+                    // Call the function that handles the duplicates
+                    if (duplicates.Count > 1) {
+                        // handle duplicates
+                        foreach(DataRow d in duplicates) {
+                            authors.Add(new Author(d["FirstName"].ToString(), d["LastName"].ToString()));
+                        }
+                    }
+
+                    authors.Add(new Author(row["FirstName"].ToString(), row["LastName"].ToString()));
+                    products.Add(
+                        new EResourse(
+                            (int)row["Id"],
+                            row["Name"].ToString(), new List<Author>(authors), 
+                            row["Link"].ToString(), row["Annotation"].ToString()
+                        )
+                    );
+
+                    duplicates.Clear();
+                    authors.Clear();
+                }
+                previous = rowID;
+            }
+
+            return products;
+        }
         public static List<Product> GetAllProducts() {
             List<Product> products = new List<Product>();
             products.AddRange(GetBooks());
             products.AddRange(GetArticles());
             products.AddRange(GetEResourses());
+            return products;
+        }
+        public static List<Product> GetAllArchivedProducts() {
+            List<Product> products = new List<Product>();
+            products.AddRange(GetBooksArchived());
+            products.AddRange(GetArticlesArchived());
+            products.AddRange(GetEResoursesArchived());
             return products;
         }
     }

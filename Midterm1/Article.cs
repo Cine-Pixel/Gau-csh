@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Midterm1 {
     public class Article : Product {
         #region Private Props
+        private int id;
         private string name;
         private List<Author> authors;
         private string journalName;
@@ -16,6 +17,7 @@ namespace Midterm1 {
         #endregion
 
         #region Public Props
+        public int Id { get => id; }
         public string PName { get => name; }
         public string Authors { get {
                 string allAuthorInfo = "";
@@ -32,7 +34,8 @@ namespace Midterm1 {
         public int PageNumber { get => pageNumber; }
         #endregion
 
-        public Article(string name, List<Author> authors, string journal, int number, DateTime publishDate, int pageNumber) {
+        public Article(int id, string name, List<Author> authors, string journal, int number, DateTime publishDate, int pageNumber) {
+            this.id = id;
             this.name = name;
             this.authors = authors;
             this.journalName = journal;

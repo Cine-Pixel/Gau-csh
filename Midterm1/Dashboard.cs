@@ -44,6 +44,7 @@ namespace Midterm1 {
                     row.Cells[2].Value = b.PublishDate;
                     row.Cells[3].Value = b.Publisher;
                     row.Cells[4].Value = b.PageNumber;
+                    row.Cells[9].Value = b.Id;
                     dtgProducts.Rows.Add(row);
                 }
                 else if (product.GetType() == typeof(Article)) {
@@ -54,6 +55,7 @@ namespace Midterm1 {
                     row.Cells[4].Value = a.PageNumber;
                     row.Cells[5].Value = a.JournalName;
                     row.Cells[6].Value = a.Number;
+                    row.Cells[9].Value = a.Id;
                     dtgProducts.Rows.Add(row);
                 } else {
                     EResourse r = product as EResourse;
@@ -61,6 +63,7 @@ namespace Midterm1 {
                     row.Cells[1].Value = r.Authors;
                     row.Cells[7].Value = r.Link;
                     row.Cells[8].Value = r.Authors;
+                    row.Cells[9].Value = r.Id;
                     dtgProducts.Rows.Add(row);
                 }
             }
@@ -112,6 +115,11 @@ namespace Midterm1 {
             DataTable topAuthors = DB.Procedure("TopAuthors");
             AuthorsForm authorsForm = new AuthorsForm(topAuthors);
             authorsForm.Show();
+        }
+
+        private void btnViewArchive_Click(object sender, EventArgs e) {
+            ArchiveForm archive = new ArchiveForm();
+            archive.Show();
         }
     }
 }

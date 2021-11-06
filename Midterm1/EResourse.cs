@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Midterm1 {
     public class EResourse : Product {
         #region Private Props
+        private int id;
         private string name;
         private List<Author> authors;
         private string link;
@@ -14,6 +15,7 @@ namespace Midterm1 {
         #endregion
 
         #region Public Props
+        public int Id { get => id; }
         public string PName { get => name; }
         public string Authors { get {
                 string allAuthorInfo = "";
@@ -27,7 +29,8 @@ namespace Midterm1 {
         public string Annotation { get => annotation; }
         #endregion
 
-        public EResourse(string name, List<Author> authors, string link, string annotation) {
+        public EResourse(int id, string name, List<Author> authors, string link, string annotation) {
+            this.id = id;
             this.name = name;
             this.authors = authors;
             this.link = link;
