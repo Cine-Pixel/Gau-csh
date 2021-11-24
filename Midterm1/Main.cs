@@ -10,7 +10,7 @@ namespace Midterm1 {
         }
 
         private void Main_Load(object sender, EventArgs e) {
-            //dashboard1.Hide();
+            dashboard1.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
