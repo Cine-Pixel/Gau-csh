@@ -103,7 +103,7 @@ namespace quiz2 {
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dtgProducts);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProducts)).EndInit();
             this.ResumeLayout(false);

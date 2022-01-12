@@ -161,7 +161,7 @@ namespace quiz2.Forms {
             this.Controls.Add(this.tbProductName);
             this.Controls.Add(this.tbPackage);
             this.Name = "ProductForm";
-            this.Text = "ProductForm";
+            this.Text = "Warehouse - Product";
             this.Load += new System.EventHandler(this.ProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUnitPrice)).EndInit();
             this.ResumeLayout(false);

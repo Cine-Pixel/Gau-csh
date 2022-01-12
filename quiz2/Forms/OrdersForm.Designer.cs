@@ -90,7 +90,7 @@ namespace quiz2.Forms {
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtgOrders);
             this.Name = "OrdersForm";
-            this.Text = "OrdersForm";
+            this.Text = "Warehouse - Orders";
             this.Load += new System.EventHandler(this.OrdersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrders)).EndInit();
             this.ResumeLayout(false);

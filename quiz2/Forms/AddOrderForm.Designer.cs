@@ -39,6 +39,8 @@ namespace quiz2.Forms {
             this.btnSave = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,11 +167,33 @@ namespace quiz2.Forms {
             this.numQuantity.Size = new System.Drawing.Size(253, 20);
             this.numQuantity.TabIndex = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(167, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 29);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Customer";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(563, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 29);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Product";
+            // 
             // AddOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 419);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.numQuantity);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSave);
@@ -186,7 +210,7 @@ namespace quiz2.Forms {
             this.Controls.Add(this.labe1);
             this.Controls.Add(this.label1);
             this.Name = "AddOrderForm";
-            this.Text = "AddOrderForm";
+            this.Text = "Warehouse - Order";
             this.Load += new System.EventHandler(this.AddOrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             this.ResumeLayout(false);
@@ -211,5 +235,7 @@ namespace quiz2.Forms {
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numQuantity;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
