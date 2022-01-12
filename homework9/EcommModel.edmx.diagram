@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e867502596f241f6bb38c8441d5c2ae3" Name="Diagram1">
+        <EntityTypeShape EntityType="EcommModel.Customer" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommModel.Order" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommModel.OrderItem" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommModel.Supplier" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="EcommModel.FK_ORDER_REFERENCE_CUSTOMER" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="EcommModel.FK_ORDERITE_REFERENCE_ORDER" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="EcommModel.FK_ORDERITE_REFERENCE_PRODUCT" ManuallyRouted="true" >
+          <ConnectorPoint PointX="4.5" PointY="1.7531183749633212" />
+          <ConnectorPoint PointX="4.8566666666666674" PointY="1.7531183749633212" />
+          <ConnectorPoint PointX="4.8566666666666674" PointY="2.1105914905024505" />
+          <ConnectorPoint PointX="5.25" PointY="2.1105914905024505" />
+        </AssociationConnector>
+        <AssociationConnector Association="EcommModel.FK_PRODUCT_REFERENCE_SUPPLIER" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2.25" PointY="1.7766368943117974" />
+          <ConnectorPoint PointX="2.5129166666666669" PointY="1.7766368943117974" />
+          <ConnectorPoint PointX="2.5129166666666669" PointY="2.1168300736658106" />
+          <ConnectorPoint PointX="3" PointY="2.1168300736658106" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
